@@ -1,0 +1,20 @@
+.apps-nav {
+  display: flex;
+}
+
+.apps-nav li {
+  width: 3%;
+  list-style-type: none;
+  margin: 5px;
+}
+
+.apps-nav button {
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.apps-nav img {
+  width: 100%;
+}
