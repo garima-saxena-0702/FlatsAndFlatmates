@@ -49,13 +49,22 @@
   &-input {
 
     margin: 10px;
-
+    background: #74c69d;
+    border: 1px transparent;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+    
     &-box {
-      outline: none;
       background: #74c69d;
-      border: 1px transparent;
+      outline: none;
       padding: 10px;
-      border-radius: 20px;
+      border: none;
+    }
+
+    &-eye {
+      margin-left: 10%;
+      color: darkgreen;
     }
   }
 }

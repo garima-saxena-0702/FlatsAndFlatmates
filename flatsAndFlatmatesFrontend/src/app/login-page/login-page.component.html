@@ -12,15 +12,16 @@
       <div class="fields">
         <div class="fields-input">
           <input placeholder="abc@xyz.com" type="text" class="fields-input-box">
+          <span class="fa fa-fw fal fa-envelope fields-input-eye"></span>
         </div>
         <div class="fields-input">
-          <input placeholder="password" type="password" class="fields-input-box">
-          <span class="fa fa-fw fa-eye"></span>
+          <input id="sighInPassword" placeholder="password" type="password" class="fields-input-box">
+          <span id="eyeIcon" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType()"></span>
         </div>
         <div>
           <a>Forgot your pasword</a>
         </div>
-        <div class="fields-input">
+        <div class="">
           <button>Login</button>
         </div>
       </div>
