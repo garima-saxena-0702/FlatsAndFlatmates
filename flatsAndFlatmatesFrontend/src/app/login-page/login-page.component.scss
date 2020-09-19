@@ -28,6 +28,7 @@
 .container {
 
   display: flex;
+  margin-top: 6%;
 
   &-login {
     display: flex;
@@ -41,4 +42,20 @@
 
 .input-div {
   display: -ms-inline-grid;
+}
+
+.fields {
+
+  &-input {
+
+    margin: 10px;
+
+    &-box {
+      outline: none;
+      background: #74c69d;
+      border: 1px transparent;
+      padding: 10px;
+      border-radius: 20px;
+    }
+  }
 }
