@@ -30,12 +30,24 @@ $base-color: #74c69d;
 .container {
 
   display: flex;
-  margin-top: 6%;
+  overflow: hidden;
 
   &-login {
     display: flex;
     text-align: center;
-    width: 40%;
+    width: 100vw;
+    height: 100vh;
+
+    &-active {
+      margin-top: 6%;
+      height: 100%;
+    }
+
+    &-inactive {
+      background-color: $base-color;
+      width: 100%;
+      height: 100%;
+    }
   }
   &-signup {
     width: 60%;

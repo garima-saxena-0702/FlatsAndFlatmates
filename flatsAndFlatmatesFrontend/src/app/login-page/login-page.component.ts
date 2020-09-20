@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
 
+  public newUser: boolean = false;
+
   constructor() { }
   
   ngOnInit() {
