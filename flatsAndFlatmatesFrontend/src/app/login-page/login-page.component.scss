@@ -1,3 +1,5 @@
+$base-color: #74c69d;
+
 .nav {
 
   margin-left: 35%;
@@ -49,14 +51,14 @@
   &-input {
 
     margin: 10px;
-    background: #74c69d;
+    background: $base-color;
     border: 1px transparent;
     border-radius: 20px;
     width: 50%;
     margin-left: 25%;
     
     &-box {
-      background: #74c69d;
+      background: $base-color;
       outline: none;
       padding: 10px;
       border: none;
@@ -65,6 +67,22 @@
     &-eye {
       margin-left: 10%;
       color: darkgreen;
+    }
+  }
+
+  &-login {
+
+    margin: 5%;
+
+    &-button {
+      padding: 6px;
+      width: 20%;
+      background: dodgerblue;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      font-size: 1.3rem;
+      color: white;
     }
   }
 }
