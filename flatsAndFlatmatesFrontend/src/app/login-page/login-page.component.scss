@@ -1,5 +1,21 @@
 $base-color: #74c69d;
 
+@mixin button-style($color){
+  outline: none;
+  border: 0;
+  padding: 0;
+  background-color: $color;
+}
+
+@mixin button-login() {
+  padding: 6px;
+  width: 155px;
+  height: 36px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  color: white;
+}
+
 .nav {
 
   margin-left: 35%;
@@ -15,10 +31,8 @@ $base-color: #74c69d;
     }
 
     button {
-      outline: none;
-      border: 0;
       padding: 0;
-      background-color: white;
+      @include button-style(white);
     }
 
     img {
@@ -47,6 +61,12 @@ $base-color: #74c69d;
       background-color: $base-color;
       width: 100%;
       height: 100%;
+      padding-top: 10%;
+
+      &-button {
+        @include button-style(dodgerblue);
+        @include button-login();
+      }
     }
   }
   &-signup {
@@ -87,14 +107,8 @@ $base-color: #74c69d;
     margin: 5%;
 
     &-button {
-      padding: 6px;
-      width: 20%;
-      background: dodgerblue;
-      outline: none;
-      border: none;
-      border-radius: 20px;
-      font-size: 1.3rem;
-      color: white;
+      @include button-style( dodgerblue);
+      @include button-login();
     }
   }
 }
