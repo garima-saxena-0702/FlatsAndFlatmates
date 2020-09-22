@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="container-login" *ngIf="!newUser">
-    <div class="container-login-active">
+  <div class="container-login">
+    <div class="container-login-active" *ngIf="!newUser">
       <h1>Sign in to find flatmates</h1>
       <nav class="nav">
         <ul class="nav-apps">
@@ -16,7 +16,7 @@
         </div>
         <div class="fields-input">
           <input id="sighInPassword" placeholder="password" type="password" class="fields-input-box">
-          <span id="eyeIcon" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType()"></span>
+          <span id="eyeIcon" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighInPassword', 'eyeIcon')"></span>
         </div>
         <div>
           <span style="color: rgb(0, 0, 238);">Forgot pasword?</span>
@@ -25,21 +25,42 @@
           <button class="fields-login-button">Login</button>
         </div>
       </div>
-      </div>
+    </div>
     <div class="container-login-inactive">
-      <h1>Do not have an account?</h1>
-      <h2> Sign up here!!</h2>
-      <button class="container-login-inactive-button" (click)="signupToggle()">Sign up</button>
+      <div *ngIf="!newUser">
+        <h1>Do not have an account?</h1>
+        <h2> Sign up here!!</h2>
+        <button class="container-login-inactive-button" (click)="signupToggle()">Sign up</button>
+      </div>
+      <div *ngIf="newUser">
+        <h1>Already have an account?</h1>
+        <h2>Login here!!</h2>
+        <button class="container-login-inactive-button" (click)="signupToggle()">Login</button>
+      </div>
     </div>
-  </div>
-  <div class="container-signup" *ngIf="newUser">
-    <div class="container-signup-inactive">      
-      <h1>Already have an account?</h1>
-      <h2>Login here!!</h2>
-      <button class="container-login-inactive-button" (click)="signupToggle()">Sign up</button>
-    </div>
-    <div class="container-signup-active">
-
+    <div class="container-login-signup" *ngIf="newUser">
+      <h1>Sign up to find flatmates</h1>
+      <div class="fields">
+        <div class="fields-input">
+          <input placeholder="User Name" type="text" class="fields-input-box">
+          <!-- <span class="fa fa-fw fal fa-envelope fields-input-eye"></span> -->
+        </div>
+        <div class="fields-input">
+          <input placeholder="abc@xyz.com" type="text" class="fields-input-box">
+          <span class="fa fa-fw fal fa-envelope fields-input-eye"></span>
+        </div>
+        <div class="fields-input">
+          <input id="sighUpPassword" placeholder="Password" type="password" class="fields-input-box">
+          <span id="eyeIconSignUP" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordSignType('sighUpPassword', 'eyeIconSignUP')"></span>
+        </div>
+        <div class="fields-input">
+          <input id="sighUpPasswordConfirm" placeholder="Confirm Password" type="password" class="fields-input-box">
+          <span id="eyeIconSignUpConfirm" class="fa fa-fw fa-eye fields-input-eye" (click)="toggleConPasswordSignType('sighUpPasswordConfirm', 'eyeIconSignUpConfirm')"></span>
+        </div>
+        <div class="fields-login">
+          <button class="fields-login-button">Sign Up</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
