@@ -29,14 +29,16 @@
     <div class="container-login-inactive">
       <h1>Do not have an account?</h1>
       <h2> Sign up here!!</h2>
-      <button class="container-login-inactive-button" (click)="signupActivate()">Sign up</button>
+      <button class="container-login-inactive-button" (click)="signupToggle()">Sign up</button>
     </div>
   </div>
   <div class="container-signup" *ngIf="newUser">
-    <div class="conatiner-signup-active">
-
+    <div class="container-signup-inactive">      
+      <h1>Already have an account?</h1>
+      <h2>Login here!!</h2>
+      <button class="container-login-inactive-button" (click)="signupToggle()">Sign up</button>
     </div>
-    <div class="container-signup-inactive">
+    <div class="container-signup-active">
 
     </div>
   </div>

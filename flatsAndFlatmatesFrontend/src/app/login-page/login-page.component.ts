@@ -21,7 +21,7 @@ export class LoginPageComponent implements OnInit {
     document.getElementById("eyeIcon").classList.add(classFa ? "fa-eye-slash" : "fa-eye");
   }
 
-  signupActivate() {
+  signupToggle() {
     this.newUser = !this.newUser;
   }
 
