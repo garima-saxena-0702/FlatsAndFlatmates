@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-login">
-    <div class="container-login-active" *ngIf="!newUser">
+    <div class="container-login-active" [hidden]="newUser">
       <h1>Sign in to find flatmates</h1>
       <nav class="nav">
         <ul class="nav-apps">
@@ -38,7 +38,7 @@
         <button class="container-login-inactive-button" (click)="signupToggle()">Login</button>
       </div>
     </div>
-    <div class="container-login-signup" *ngIf="newUser">
+    <div class="container-login-signup" [hidden]="!newUser">
       <h1>Sign up to find flatmates</h1>
       <div class="fields">
         <div class="fields-input">
@@ -51,11 +51,11 @@
         </div>
         <div class="fields-input">
           <input id="sighUpPassword" placeholder="Password" type="password" class="fields-input-box">
-          <span id="eyeIconSignUP" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordSignType('sighUpPassword', 'eyeIconSignUP')"></span>
+          <span id="eyeIconSignUP" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighUpPassword', 'eyeIconSignUP')"></span>
         </div>
         <div class="fields-input">
           <input id="sighUpPasswordConfirm" placeholder="Confirm Password" type="password" class="fields-input-box">
-          <span id="eyeIconSignUpConfirm" class="fa fa-fw fa-eye fields-input-eye" (click)="toggleConPasswordSignType('sighUpPasswordConfirm', 'eyeIconSignUpConfirm')"></span>
+          <span id="eyeIconSignUpConfirm" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighUpPasswordConfirm', 'eyeIconSignUpConfirm')"></span>
         </div>
         <div class="fields-login">
           <button class="fields-login-button">Sign Up</button>

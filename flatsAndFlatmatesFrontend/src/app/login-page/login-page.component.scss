@@ -55,25 +55,25 @@ $base-color: #74c69d;
 
     &-active {
       margin-top: 6%;
-      height: 100%;
       width: 40%;
     }
-
+    
     &-inactive {
       background-color: $base-color;
       width: 60%;
       height: 100%;
       padding-top: 10%;
-
+      
       &-button {
         @include button-style(dodgerblue);
         @include button-login();
       }
     }
-
+    
     &-signup {
-
+      
       width: 40%;
+      margin-top: 6%;
     }
   }
 }
