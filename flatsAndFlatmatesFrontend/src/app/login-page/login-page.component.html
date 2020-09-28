@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-login">
-    <div class="container-login-active" [hidden]="newUser">
+    <div class="container-login-active"  [ngStyle]="{'display': newUser ? 'none' : 'block' }">
       <h1>Sign in to find flatmates</h1>
       <nav class="nav">
         <ul class="nav-apps">
@@ -38,7 +38,7 @@
         <button class="container-login-inactive-button" (click)="signupToggle()">Login</button>
       </div>
     </div>
-    <div class="container-login-signup" [hidden]="!newUser">
+    <div class="container-login-signup" [ngStyle]="{'display': !newUser ? 'none' : 'block'}">
       <h1>Sign up to find flatmates</h1>
       <div class="fields">
         <div class="fields-input">
