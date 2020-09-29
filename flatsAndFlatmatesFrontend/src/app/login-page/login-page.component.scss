@@ -55,7 +55,6 @@ $base-color: #74c69d;
 
     &-active {
       margin-top: 6%;
-      // width: 40%;
       transition: width 0.2s linear;
     }
     
@@ -64,7 +63,6 @@ $base-color: #74c69d;
       width: 60%;
       height: 100%;
       padding-top: 10%;
-      // transition: width 0.5s linear;
       
       &-button {
         @include button-style(dodgerblue);
@@ -73,7 +71,6 @@ $base-color: #74c69d;
     }
     
     &-signup {
-      // width: 40%;
       margin-top: 6%;
       transition: width 0.2s linear;
     }
