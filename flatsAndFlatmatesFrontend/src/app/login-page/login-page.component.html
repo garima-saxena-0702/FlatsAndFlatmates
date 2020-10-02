@@ -11,18 +11,18 @@
       <div>Or connect through google</div>
       <div class="fields">
         <div class="fields-input">
-          <input placeholder="abc@xyz.com" type="text" class="fields-input-box">
+          <input placeholder="abc@xyz.com" type="text" class="fields-input-box" [(ngModel)]="email">
           <span class="fa fa-fw fal fa-envelope fields-input-eye"></span>
         </div>
         <div class="fields-input">
-          <input id="sighInPassword" placeholder="password" type="password" class="fields-input-box">
+          <input id="sighInPassword" placeholder="password" type="password" class="fields-input-box" [(ngModel)]="password">
           <span id="eyeIcon" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighInPassword', 'eyeIcon')"></span>
         </div>
         <div>
           <span style="color: rgb(0, 0, 238);">Forgot pasword?</span>
         </div>
         <div class="fields-login">
-          <button class="fields-login-button">Login</button>
+          <button class="fields-login-button" (click)="login()">Login</button>
         </div>
       </div>
     </div>
@@ -42,23 +42,23 @@
       <h1>Sign up to find flatmates</h1>
       <div class="fields">
         <div class="fields-input">
-          <input placeholder="User Name" type="text" class="fields-input-box">
-          <!-- <span class="fa fa-fw fal fa-envelope fields-input-eye"></span> -->
+          <input placeholder="User Name" type="text" class="fields-input-box" [(ngModel)]="userName">
+          <span class="fa fa-fw fal fa-user fields-input-eye"></span>
         </div>
         <div class="fields-input">
-          <input placeholder="abc@xyz.com" type="text" class="fields-input-box">
+          <input placeholder="abc@xyz.com" type="text" class="fields-input-box" [(ngModel)]="email">
           <span class="fa fa-fw fal fa-envelope fields-input-eye"></span>
         </div>
         <div class="fields-input">
-          <input id="sighUpPassword" placeholder="Password" type="password" class="fields-input-box">
+          <input id="sighUpPassword" placeholder="Password" type="password" class="fields-input-box" [(ngModel)]="password">
           <span id="eyeIconSignUP" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighUpPassword', 'eyeIconSignUP')"></span>
         </div>
         <div class="fields-input">
-          <input id="sighUpPasswordConfirm" placeholder="Confirm Password" type="password" class="fields-input-box">
+          <input id="sighUpPasswordConfirm" placeholder="Confirm Password" type="password" class="fields-input-box" [(ngModel)]="confPassword">
           <span id="eyeIconSignUpConfirm" class="fa fa-fw fa-eye fields-input-eye" (click)="togglePasswordType('sighUpPasswordConfirm', 'eyeIconSignUpConfirm')"></span>
         </div>
         <div class="fields-login">
-          <button class="fields-login-button">Sign Up</button>
+          <button class="fields-login-button" (click)="signup()">Sign Up</button>
         </div>
       </div>
     </div>

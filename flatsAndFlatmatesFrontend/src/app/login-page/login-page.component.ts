@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPageComponent implements OnInit {
 
   public newUser: boolean = false;
+  public userName: string;
+  public email: string;
+  public password: string;
+  public confPassword: string;
 
   constructor() { }
   
@@ -23,6 +27,24 @@ export class LoginPageComponent implements OnInit {
 
   signupToggle() {
     this.newUser = !this.newUser;
+    this.resetValues()
+  }
+
+  login() {
+    console.log("in login");
+    console.log(this.email);
+    console.log(this.password);
+  }
+
+  signup() {
+
+  }
+
+  resetValues() {
+    this.password = "";
+    this.email = "";
+    this.confPassword="";
+    this.userName = "";
   }
 
 }
