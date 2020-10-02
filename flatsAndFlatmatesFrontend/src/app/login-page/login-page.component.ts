@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginPageService } from './login-page.service';
 
 @Component({
   selector: 'app-login-page',
@@ -13,7 +14,7 @@ export class LoginPageComponent implements OnInit {
   public password: string;
   public confPassword: string;
 
-  constructor() { }
+  constructor(private loginPageService: LoginPageService) { }
   
   ngOnInit() {
   }
@@ -32,8 +33,17 @@ export class LoginPageComponent implements OnInit {
 
   login() {
     console.log("in login");
-    console.log(this.email);
-    console.log(this.password);
+    let model = {
+      email: this.email,
+      password: this.password
+    }
+    this.loginPageService.loginAttempt(model).subscribe(
+        result => {
+          console.log(result);
+        }),
+        error => {
+          console.log("error occured", error)
+        }
   }
 
   signup() {
