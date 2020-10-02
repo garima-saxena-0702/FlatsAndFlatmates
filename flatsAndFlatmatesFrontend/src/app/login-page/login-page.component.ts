@@ -32,18 +32,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   login() {
-    console.log("in login");
-    let model = {
-      email: this.email,
-      password: this.password
-    }
-    this.loginPageService.loginAttempt(model).subscribe(
-        result => {
-          console.log(result);
-        }),
-        error => {
-          console.log("error occured", error)
-        }
+    this.loginPageService.loginAttempt(this.email, this.password);
   }
 
   signup() {
@@ -55,6 +44,10 @@ export class LoginPageComponent implements OnInit {
     this.email = "";
     this.confPassword="";
     this.userName = "";
+  }
+
+  ngOnDestroy() {
+    // this.authStatusSub.unsubscribe()
   }
 
 }
